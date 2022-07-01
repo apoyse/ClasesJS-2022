@@ -1,0 +1,28 @@
+https://glitch.com/
+
+hace un .zip el trabaja
+
+
+lo subis en assets
+
+copias el link del zip
+
+abris terminal y escribis:
+
+wget -O proyect.zip (pegas el link ciopiado)
+
+
+unzip proyect.zip -d .
+
+
+rm proyect.zip index.html script.js style.css
+
+ls
+
+refresh
+
+cambias el PORT por : process.env.PORT
+
+
+
+LISTOOOO
