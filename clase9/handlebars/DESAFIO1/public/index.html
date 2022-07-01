@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <span id="datos"></span>
+    
+    <span id="hola"></span>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        const contexto = {nombre: "andres"}
+
+        const templateHola = '<h1> Hola {{nombre}}</h1>';
+        const templateChau = '<h1> Chau {{nombre}}</h1>';
+
+        const generarHola = Handlebars.compile(templateHola)
+        const htmlHola = generarHola(contexto)
+      
+        // document.getElementById('hola').innerHTML = htmlHola;
+
+
+       
+        const templateDatos = 
+        `<h1>Datos Personales</h1> 
+        <ul>
+            <li>{{nombre}}</li>
+
+            <li>{{apellido}}</li>
+            <li>{{edad}}</li>
+        </ul>`;
+        const generarDatos = Handlebars.compile(templateDatos)
+        const contexto2 = generarDatos(
+            {nombre: 'Andres',
+            apellido:'Poysegu',
+            edad:"18"
+        })
+
+        document.getElementById('datos').innerHTML = contexto2;
+
+        
+
+
+    </script>
+</body>
+</html>
